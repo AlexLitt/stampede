@@ -1,0 +1,871 @@
+{
+  "weekId": "2026-W34",
+  "generatedAt": "2026-08-19T09:01:48.133Z",
+  "note": "Named TrustMRR rows that did not match a cluster. Human writes slug + oneLine. Do not auto-insert.",
+  "items": [
+    {
+      "slug": "stan",
+      "name": "Stan",
+      "category": "Content Creation",
+      "website": "https://stan.store",
+      "mrrUsd": 35697,
+      "why": "unmatched"
+    },
+    {
+      "slug": "superfruits",
+      "name": "GojiberryAI",
+      "category": null,
+      "website": "https://gojiberry.ai",
+      "mrrUsd": 4244,
+      "why": "unmatched"
+    },
+    {
+      "slug": "bustem-inc",
+      "name": "Bustem, Inc",
+      "category": "E-commerce",
+      "website": "https://bustem.com",
+      "mrrUsd": 3829,
+      "why": "unmatched"
+    },
+    {
+      "slug": "kl23iod2mdka",
+      "name": "Aplano",
+      "category": "Productivity",
+      "website": "https://www.getaplano.com",
+      "mrrUsd": 2479,
+      "why": "unmatched"
+    },
+    {
+      "slug": "kibu",
+      "name": "Kibu",
+      "category": "Education",
+      "website": "https://kibu.com",
+      "mrrUsd": 2343,
+      "why": "unmatched"
+    },
+    {
+      "slug": "cometly",
+      "name": "Cometly",
+      "category": "Analytics",
+      "website": "https://www.cometly.com",
+      "mrrUsd": 2134,
+      "why": "unmatched"
+    },
+    {
+      "slug": "postiz",
+      "name": "Postiz",
+      "category": "Social Media",
+      "website": "https://postiz.com",
+      "mrrUsd": 1879,
+      "why": "unmatched"
+    },
+    {
+      "slug": "brand-on-demand-inc",
+      "name": "Brand On Demand, Inc.",
+      "category": "E-commerce",
+      "website": "http://supliful.com/",
+      "mrrUsd": 1829,
+      "why": "unmatched"
+    },
+    {
+      "slug": "codedex",
+      "name": "Codédex",
+      "category": "Education",
+      "website": "https://www.codedex.io",
+      "mrrUsd": 887,
+      "why": "unmatched"
+    },
+    {
+      "slug": "supergrow",
+      "name": "Supergrow",
+      "category": "Social Media",
+      "website": "https://supergrow.ai",
+      "mrrUsd": 795,
+      "why": "unmatched"
+    },
+    {
+      "slug": "propgpt-ai-props-analysis",
+      "name": "PropGPT: AI Props Analysis",
+      "category": "Mobile Apps",
+      "website": "https://apps.apple.com/us/app/propgpt-ai-props-analysis/id6645884227",
+      "mrrUsd": 778,
+      "why": "unmatched"
+    },
+    {
+      "slug": "vidai-llc",
+      "name": "Vid.AI",
+      "category": "Artificial Intelligence",
+      "website": "https://vid.ai",
+      "mrrUsd": 759,
+      "why": "unmatched"
+    },
+    {
+      "slug": "upscale-system-llc",
+      "name": "Upscale System LLC",
+      "category": "Artificial Intelligence",
+      "website": "upscaleb2b.com",
+      "mrrUsd": 748,
+      "why": "unmatched"
+    },
+    {
+      "slug": "llm-gateway",
+      "name": "LLM Gateway",
+      "category": "Artificial Intelligence",
+      "website": "https://llmgateway.io",
+      "mrrUsd": 712,
+      "why": "unmatched"
+    },
+    {
+      "slug": "dataexpert-techcreator",
+      "name": "DataExpert / TechCreator",
+      "category": "Education",
+      "website": "https://www.dataexpert.io",
+      "mrrUsd": 602,
+      "why": "unmatched"
+    },
+    {
+      "slug": "dropkiller",
+      "name": "Dropkiller",
+      "category": "E-commerce",
+      "website": "www.dropkiller.com",
+      "mrrUsd": 602,
+      "why": "unmatched"
+    },
+    {
+      "slug": "gotall",
+      "name": "GoTall",
+      "category": "Health & Fitness",
+      "website": "https://gotall.app",
+      "mrrUsd": 601,
+      "why": "unmatched"
+    },
+    {
+      "slug": "project-a",
+      "name": "Project A",
+      "category": "Entertainment",
+      "website": "http://www.trustmrr.com/project-a",
+      "mrrUsd": 588,
+      "why": "unmatched"
+    },
+    {
+      "slug": "virtualjk",
+      "name": "VirtualJK",
+      "category": null,
+      "website": "https://virtualjk.com",
+      "mrrUsd": 564,
+      "why": "unmatched"
+    },
+    {
+      "slug": "indexsy-consulting-ltd",
+      "name": "Indexsy",
+      "category": "Marketing",
+      "website": "https://indexsy.com/services",
+      "mrrUsd": 537,
+      "why": "unmatched"
+    },
+    {
+      "slug": "promptwise",
+      "name": "Promptwise",
+      "category": "Artificial Intelligence",
+      "website": "https://www.promptwise.com",
+      "mrrUsd": 466,
+      "why": "unmatched"
+    },
+    {
+      "slug": "seobot",
+      "name": "SEOBOT",
+      "category": "Artificial Intelligence",
+      "website": "https://seobotai.com",
+      "mrrUsd": 457,
+      "why": "unmatched"
+    },
+    {
+      "slug": "post-bridge",
+      "name": "POST BRIDGE",
+      "category": "Social Media",
+      "website": "https://www.post-bridge.com",
+      "mrrUsd": 426,
+      "why": "unmatched"
+    },
+    {
+      "slug": "simple-analytics",
+      "name": "Simple Analytics",
+      "category": "Analytics",
+      "website": "https://www.simpleanalytics.com",
+      "mrrUsd": 405,
+      "why": "unmatched"
+    },
+    {
+      "slug": "taller",
+      "name": "Taller",
+      "category": "Health & Fitness",
+      "website": "https://www.tallerapp.xyz",
+      "mrrUsd": 404,
+      "why": "unmatched"
+    },
+    {
+      "slug": "laper",
+      "name": "Laper",
+      "category": "Artificial Intelligence",
+      "website": "https://laper.ai",
+      "mrrUsd": 380,
+      "why": "unmatched"
+    },
+    {
+      "slug": "launch-club",
+      "name": "Launch Club",
+      "category": "Marketing",
+      "website": "https://launchclub.ai",
+      "mrrUsd": 373,
+      "why": "unmatched"
+    },
+    {
+      "slug": "conductor",
+      "name": "Conductor",
+      "category": "Developer Tools",
+      "website": "https://conductor.is",
+      "mrrUsd": 372,
+      "why": "unmatched"
+    },
+    {
+      "slug": "web3forms",
+      "name": "Web3Forms",
+      "category": "Developer Tools",
+      "website": "https://web3forms.com",
+      "mrrUsd": 364,
+      "why": "unmatched"
+    },
+    {
+      "slug": "uhoh-com",
+      "name": "uhoh.com",
+      "category": "Customer Support",
+      "website": "https://uhoh.com",
+      "mrrUsd": 351,
+      "why": "unmatched"
+    },
+    {
+      "slug": "lunchbreak",
+      "name": "Lunchbreak",
+      "category": "Education",
+      "website": "https://lunchbreak.ai",
+      "mrrUsd": 320,
+      "why": "unmatched"
+    },
+    {
+      "slug": "elitetrainer",
+      "name": "EliteTrainer",
+      "category": "SaaS",
+      "website": "https://elitetrainer.fit",
+      "mrrUsd": 303,
+      "why": "unmatched"
+    },
+    {
+      "slug": "rank-prompt",
+      "name": "Rank Prompt",
+      "category": "Artificial Intelligence",
+      "website": "https://rankprompt.com",
+      "mrrUsd": 298,
+      "why": "unmatched"
+    },
+    {
+      "slug": "backpedal-ltd",
+      "name": "BackPedal Ltd",
+      "category": "Security",
+      "website": "https://www.backpedal.co/",
+      "mrrUsd": 284,
+      "why": "unmatched"
+    },
+    {
+      "slug": "stack-influence",
+      "name": "Stack Influence",
+      "category": "Marketing",
+      "website": "https://stackinfluence.com",
+      "mrrUsd": 282,
+      "why": "unmatched"
+    },
+    {
+      "slug": "cosmo",
+      "name": "Cosmo",
+      "category": "E-commerce",
+      "website": "https://www.visitcosmo.com",
+      "mrrUsd": 279,
+      "why": "unmatched"
+    },
+    {
+      "slug": "ae-intelligence",
+      "name": "AE-intelligence",
+      "category": "Artificial Intelligence",
+      "website": "https://humanizeaitext.ai/",
+      "mrrUsd": 278,
+      "why": "unmatched"
+    },
+    {
+      "slug": "capgo",
+      "name": "Capgo",
+      "category": "Developer Tools",
+      "website": "https://capgo.app",
+      "mrrUsd": 275,
+      "why": "unmatched"
+    },
+    {
+      "slug": "datafast",
+      "name": "DataFast",
+      "category": "Analytics",
+      "website": "https://datafa.st",
+      "mrrUsd": 269,
+      "why": "unmatched"
+    },
+    {
+      "slug": "groups-watcher",
+      "name": "Groups Watcher",
+      "category": "Marketing",
+      "website": "https://www.groupswatcher.com",
+      "mrrUsd": 258,
+      "why": "unmatched"
+    },
+    {
+      "slug": "angel-match",
+      "name": "Angel Match",
+      "category": "SaaS",
+      "website": "https://angelmatch.io",
+      "mrrUsd": 257,
+      "why": "unmatched"
+    },
+    {
+      "slug": "pushouse",
+      "name": "Pushouse",
+      "category": "E-commerce",
+      "website": "https://pushouse.com",
+      "mrrUsd": 254,
+      "why": "unmatched"
+    },
+    {
+      "slug": "debatium",
+      "name": "Debatium",
+      "category": "Entertainment",
+      "website": "https://apps.apple.com/app/id6444075752",
+      "mrrUsd": 252,
+      "why": "unmatched"
+    },
+    {
+      "slug": "localrank-so",
+      "name": "LocalRank.so",
+      "category": "Marketing",
+      "website": "https://localrank.so",
+      "mrrUsd": 243,
+      "why": "unmatched"
+    },
+    {
+      "slug": "apiframe",
+      "name": "Apiframe",
+      "category": "Artificial Intelligence",
+      "website": "https://apiframe.ai",
+      "mrrUsd": 242,
+      "why": "unmatched"
+    },
+    {
+      "slug": "talefy",
+      "name": "Talefy",
+      "category": "Games",
+      "website": "https://talefy.ai",
+      "mrrUsd": 239,
+      "why": "unmatched"
+    },
+    {
+      "slug": "sleek",
+      "name": "Sleek",
+      "category": "Design Tools",
+      "website": "https://sleek.design",
+      "mrrUsd": 233,
+      "why": "unmatched"
+    },
+    {
+      "slug": "chatseo",
+      "name": "ChatSEO",
+      "category": "SaaS",
+      "website": "https://chatseo.app",
+      "mrrUsd": 231,
+      "why": "unmatched"
+    },
+    {
+      "slug": "distribb",
+      "name": "Distribb",
+      "category": "Marketing",
+      "website": "https://distribb.io",
+      "mrrUsd": 230,
+      "why": "unmatched"
+    },
+    {
+      "slug": "draft-ai",
+      "name": "Draft AI",
+      "category": "Content Creation",
+      "website": "https://getdraft.io",
+      "mrrUsd": 228,
+      "why": "unmatched"
+    },
+    {
+      "slug": "draft-ai-1",
+      "name": "Draft AI",
+      "category": "Marketing",
+      "website": "https://getdraft.app",
+      "mrrUsd": 228,
+      "why": "unmatched"
+    },
+    {
+      "slug": "michael-veail",
+      "name": "Michael Veail",
+      "category": "Marketing",
+      "website": "https://theleadguy.online",
+      "mrrUsd": 226,
+      "why": "unmatched"
+    },
+    {
+      "slug": "trackai",
+      "name": "TrackAI",
+      "category": "Mobile Apps",
+      "website": "https://trackai.app",
+      "mrrUsd": 211,
+      "why": "unmatched"
+    },
+    {
+      "slug": "storyshort",
+      "name": "StoryShort",
+      "category": "Content Creation",
+      "website": "https://storyshort.ai",
+      "mrrUsd": 207,
+      "why": "unmatched"
+    },
+    {
+      "slug": "crush-ai",
+      "name": "Crush AI",
+      "category": "SaaS",
+      "website": "https://trycrush.ai",
+      "mrrUsd": 204,
+      "why": "unmatched"
+    },
+    {
+      "slug": "lancer-app",
+      "name": "Lancer.app",
+      "category": "Sales",
+      "website": "https://www.lancer.app",
+      "mrrUsd": 204,
+      "why": "unmatched"
+    },
+    {
+      "slug": "brevilabs",
+      "name": "Brevilabs",
+      "category": "Artificial Intelligence",
+      "website": "https://brevilabs.com",
+      "mrrUsd": 197,
+      "why": "unmatched"
+    },
+    {
+      "slug": "controlresell",
+      "name": "ControlResell",
+      "category": "E-commerce",
+      "website": "https://controlresell.com",
+      "mrrUsd": 192,
+      "why": "unmatched"
+    },
+    {
+      "slug": "imposter-ai",
+      "name": "imposter․ai",
+      "category": "Games",
+      "website": "https://apps.apple.com/app/id6754861642",
+      "mrrUsd": 177,
+      "why": "unmatched"
+    },
+    {
+      "slug": "hong-xuan-kow",
+      "name": "Hong Xuan Kow",
+      "category": "Artificial Intelligence",
+      "website": "https://koe.sh",
+      "mrrUsd": 167,
+      "why": "unmatched"
+    },
+    {
+      "slug": "leadx",
+      "name": "LeadX",
+      "category": "Artificial Intelligence",
+      "website": "https://leadx.com",
+      "mrrUsd": 166,
+      "why": "unmatched"
+    },
+    {
+      "slug": "soundboost-ai-formerly-diktatorial",
+      "name": "SoundBoost.ai (formerly Diktatorial)",
+      "category": "Entertainment",
+      "website": "https://soundboost.ai",
+      "mrrUsd": 164,
+      "why": "unmatched"
+    },
+    {
+      "slug": "my-x-project-2",
+      "name": "My X project 2",
+      "category": "SaaS",
+      "website": "https://x.com/buildwithJames",
+      "mrrUsd": 161,
+      "why": "unmatched"
+    },
+    {
+      "slug": "tradingbox-pro",
+      "name": "TradingBox Pro",
+      "category": "Fintech",
+      "website": "https://tradingbox.pro",
+      "mrrUsd": 149,
+      "why": "unmatched"
+    },
+    {
+      "slug": "icollect-everything-all-apps",
+      "name": "iCollect Everything - All Apps",
+      "category": "Productivity",
+      "website": "https://apps.apple.com/app/id559036969",
+      "mrrUsd": 147,
+      "why": "unmatched"
+    },
+    {
+      "slug": "xagio-inc",
+      "name": "Xagio Inc",
+      "category": "SaaS",
+      "website": "https://xagio.com",
+      "mrrUsd": 141,
+      "why": "unmatched"
+    },
+    {
+      "slug": "dailyglowup",
+      "name": "Dailyglowup: Maximize Looks",
+      "category": "Artificial Intelligence",
+      "website": "https://www.dailyglowup.app",
+      "mrrUsd": 137,
+      "why": "unmatched"
+    },
+    {
+      "slug": "brawler",
+      "name": "Brawler",
+      "category": "Artificial Intelligence",
+      "website": "https://apps.apple.com/app/id6760366949",
+      "mrrUsd": 107,
+      "why": "unmatched"
+    },
+    {
+      "slug": "comp-ai",
+      "name": "Comp AI",
+      "category": "Artificial Intelligence",
+      "website": "https://trycomp.ai",
+      "mrrUsd": 106,
+      "why": "unmatched"
+    },
+    {
+      "slug": "abmaxx",
+      "name": "AbMaxx",
+      "category": "Mobile Apps",
+      "website": "https://apps.apple.com/app/id6757769125",
+      "mrrUsd": 105,
+      "why": "unmatched"
+    },
+    {
+      "slug": "karma",
+      "name": "Karma",
+      "category": "SaaS",
+      "website": "https://karmabot.chat",
+      "mrrUsd": 61,
+      "why": "unmatched"
+    },
+    {
+      "slug": "of-prompt-o",
+      "name": "*** OF PROMPT OÜ",
+      "category": "Artificial Intelligence",
+      "website": "https://godofprompt.ai",
+      "mrrUsd": 53,
+      "why": "unmatched"
+    },
+    {
+      "slug": "applyall",
+      "name": "ApplyAll",
+      "category": "Recruiting & HR",
+      "website": "https://www.applyall.com",
+      "mrrUsd": 34,
+      "why": "unmatched"
+    },
+    {
+      "slug": "analytics-mates",
+      "name": "Analytics Mates",
+      "category": "Analytics",
+      "website": "https://www.analyticsmates.com",
+      "mrrUsd": 31,
+      "why": "unmatched"
+    },
+    {
+      "slug": "yew",
+      "name": "yew",
+      "category": "SaaS",
+      "website": "https://yew.gg",
+      "mrrUsd": 29,
+      "why": "unmatched"
+    },
+    {
+      "slug": "presscart",
+      "name": "Presscart",
+      "category": "Marketing",
+      "website": "http://presscart.com",
+      "mrrUsd": 20,
+      "why": "unmatched"
+    },
+    {
+      "slug": "pdb-online-diensten",
+      "name": "Saaspa.ge",
+      "category": "SaaS",
+      "website": "https://saaspa.ge",
+      "mrrUsd": 15,
+      "why": "unmatched"
+    },
+    {
+      "slug": "react-bits-pro",
+      "name": "React Bits Pro",
+      "category": "Developer Tools",
+      "website": "https://pro.reactbits.dev",
+      "mrrUsd": 8,
+      "why": "unmatched"
+    },
+    {
+      "slug": "knightvision",
+      "name": "Knightvision",
+      "category": "Content Creation",
+      "website": "https://knightvision.tech",
+      "mrrUsd": 4,
+      "why": "unmatched"
+    },
+    {
+      "slug": "medpilot",
+      "name": "MedPilot",
+      "category": "Artificial Intelligence",
+      "website": "https://www.medpilothq.com",
+      "mrrUsd": 3,
+      "why": "unmatched"
+    },
+    {
+      "slug": "doors-delivered",
+      "name": "Doors Delivered",
+      "category": "E-commerce",
+      "website": "https://doorsdelivered.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "vignette-id",
+      "name": "Vignette ID - highway & toll payments. Route planner",
+      "category": "Travel",
+      "website": "https://e-vignettes.eu",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "opire-llc",
+      "name": "Opire, LLC",
+      "category": "Developer Tools",
+      "website": "https://opire.dev",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "gumroad",
+      "name": "Gumroad",
+      "category": "E-commerce",
+      "website": "https://gumroad.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "easytools-sp-z-o-o",
+      "name": "easytools",
+      "category": "E-commerce",
+      "website": "https://easycart.pl",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "avenue-ticketing-inc",
+      "name": "Avenue Ticketing, Inc.",
+      "category": "Entertainment",
+      "website": "https://avenueticket.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "hypeproxies",
+      "name": "HypeProxies",
+      "category": "Security",
+      "website": "https://hypeproxies.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "myplots",
+      "name": "MyPlots",
+      "category": "SaaS",
+      "website": "https://myplots.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "kitze",
+      "name": "Kitze",
+      "category": "Productivity",
+      "website": "https://kitze.io",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "shugert-marketing",
+      "name": "Shugert Marketing",
+      "category": "Marketing",
+      "website": "https://shugert.com.mx",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "presswhizz",
+      "name": "PressWhizz",
+      "category": "Marketplace",
+      "website": "https://presswhizz.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "maidsnblack",
+      "name": "MaidsnBlack",
+      "category": "Marketplace",
+      "website": "https://maidsinblack.com/",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "memorable",
+      "name": "Memorable",
+      "category": "Fintech",
+      "website": "https://memorable.me",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "saikyo-llc",
+      "name": "Saikyo, LLC",
+      "category": "Content Creation",
+      "website": "https://clipster.gg",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "corsidia",
+      "name": "Corsidia",
+      "category": "Education",
+      "website": "https://corsidia.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "cartboss",
+      "name": "CartBoss",
+      "category": "E-commerce",
+      "website": "https://www.cartboss.io",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "pmsuite",
+      "name": "PMSuite",
+      "category": "Productivity",
+      "website": "https://pmsuite.co/",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "tree-nerd-academy",
+      "name": "Tree Nerd Academy",
+      "category": "Education",
+      "website": "https://treenerdacademy.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "coinpay",
+      "name": "CoinPay",
+      "category": "Fintech",
+      "website": "https://coinpayportal.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "ibergour",
+      "name": "IBERGOUR",
+      "category": "E-commerce",
+      "website": "https://www.ibergour.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "anon-1",
+      "name": "anon-1",
+      "category": null,
+      "website": "https://trustmrr.com/founder/piprocket",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "uv-blocker",
+      "name": "UV-Blocker",
+      "category": "Health & Fitness",
+      "website": "https://uv-blocker.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "acsperf",
+      "name": "ACSPerf'",
+      "category": null,
+      "website": null,
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "socialcrawl",
+      "name": "Socialcrawl",
+      "category": "Marketing",
+      "website": "https://www.socialcrawl.dev",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "foryougaming-inc",
+      "name": "ForYouGaming Inc.",
+      "category": "Games",
+      "website": "https://foryougaming.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "pasul-ro",
+      "name": "Pasul.ro",
+      "category": "Health & Fitness",
+      "website": "https://www.pasul.ro",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "mycater",
+      "name": "MyCater",
+      "category": "Marketplace",
+      "website": "https://mycater.fr",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    },
+    {
+      "slug": "altitude-cleaning-crew",
+      "name": "Altitude Cleaning Crew",
+      "category": "Marketplace",
+      "website": "https://altitudecleaningcrew.com",
+      "mrrUsd": 0,
+      "why": "unmatched"
+    }
+  ]
+}

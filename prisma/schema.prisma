@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Week {
+  id          String         @id
+  publishedAt DateTime?
+  note        String         @default("")
+  published   Boolean        @default(false)
+  clusters    ClusterWeek[]
+  submissions Submission[]
+}
+
+model Cluster {
+  slug        String         @id
+  name        String
+  oneLine     String
+  because     String         @default("")
+  doNot       String         @default("")
+  tip         String         @default("")
+  keywords    String         @default("")
+  category    String         @default("all")
+  weeks       ClusterWeek[]
+  submissions Submission[]
+}
+
+model ClusterWeek {
+  id                 Int      @id @default(autoincrement())
+  weekId             String
+  clusterSlug        String
+  lane               String
+  buildersThisWeek   Int      @default(0)
+  buildersLastWeek   Int      @default(0)
+  rank               Int      @default(0)
+  lastRank           Int?
+  receiptSource      String?
+  receiptMrrUsd      Int?
+  receiptSubs        Int?
+  receiptRating      Float?
+  receiptReviews     Int?
+  receiptUrl         String?
+  receiptLeak        String?
+  receiptLabel       String?
+  receiptChannels    String?
+  isBestHole         Boolean  @default(false)
+  week               Week     @relation(fields: [weekId], references: [id], onDelete: Cascade)
+  cluster            Cluster  @relation(fields: [clusterSlug], references: [slug], onDelete: Cascade)
+
+  @@unique([weekId, clusterSlug])
+  @@index([weekId, lane])
+}
+
+model Submission {
+  id          Int      @id @default(autoincrement())
+  rawText     String
+  clusterSlug String?
+  weekId      String
+  email       String?
+  whoHash     String?
+  ipHash      String?
+  createdAt   DateTime @default(now())
+  week        Week     @relation(fields: [weekId], references: [id], onDelete: Cascade)
+  cluster     Cluster? @relation(fields: [clusterSlug], references: [slug])
+
+  @@unique([weekId, whoHash])
+  @@index([weekId, ipHash])
+}

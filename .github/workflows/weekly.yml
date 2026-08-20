@@ -1,0 +1,39 @@
+name: weekly chart
+
+on:
+  schedule:
+    - cron: "15 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run data:weekly -- --skip-seed
+        env:
+          TRUSTMRR_API_KEY: ${{ secrets.TRUSTMRR_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_SEARCH_TOKEN || github.token }}
+          PRODUCTHUNT_TOKEN: ${{ secrets.PRODUCTHUNT_TOKEN }}
+          UPWORK_ACCESS_TOKEN: ${{ secrets.UPWORK_ACCESS_TOKEN }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+      - name: Commit bump.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/bump.json
+          if git diff --cached --quiet; then
+            echo "no data change"
+          else
+            git commit -m "data: weekly listings and week roll"
+            git push
+          fi

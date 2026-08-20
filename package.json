@@ -4,24 +4,47 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "prisma generate && next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx scripts/validate-bump.ts && tsx prisma/seed.ts",
+    "data:validate": "tsx scripts/validate-bump.ts",
+    "data:receipts": "tsx scripts/refresh-receipts.ts",
+    "data:weekly": "tsx scripts/weekly.ts",
+    "test:match": "tsx scripts/test-match.ts",
+    "test:rank": "tsx scripts/test-rank.ts",
+    "test:copy": "tsx scripts/test-copy-line.ts",
+    "test:channels": "tsx scripts/test-channels.ts",
+    "test:contrast": "tsx scripts/test-contrast.ts",
+    "test:count-me": "tsx scripts/test-count-me.ts",
+    "test:site": "tsx scripts/test-site.ts",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@prisma/adapter-libsql": "^6.16.2",
+    "@prisma/client": "^6.16.2",
+    "d3": "^7.9.0",
+    "next": "^15.5.12",
+    "prisma": "^6.16.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.0"
+    "tsx": "^4.23.12"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/d3": "^7.4.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
