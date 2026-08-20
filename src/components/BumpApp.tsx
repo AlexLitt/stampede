@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, useTransition, type ReactNode } from "react";
 import * as d3 from "d3";
 import { submitBuild } from "@/app/actions";
@@ -598,7 +599,7 @@ export function BumpApp({
       <header className="border-b border-ink/25">
         <div className="mx-auto w-full max-w-[80rem] px-4 py-5 sm:px-6 sm:py-6 lg:px-10">
           <div className="mx-auto flex max-w-[46rem] flex-col items-center text-center">
-            <a
+            <Link
               href="/"
               className="press inline-flex min-h-10 items-center gap-2 text-ink no-underline"
               aria-label="Stampede home"
@@ -627,7 +628,7 @@ export function BumpApp({
               <h1 className="rank text-[1.5rem] leading-none tracking-tight">
                 Stampede
               </h1>
-            </a>
+            </Link>
             <p className="masthead-dek mono mt-3.5 max-w-[42rem] text-pretty text-mute">
               Weekly rank of what vibe-coders are shipping versus empty holes
               that already bill. Stampede — skip. Empty — steal. Counts and
