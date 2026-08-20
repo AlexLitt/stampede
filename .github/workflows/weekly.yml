@@ -37,3 +37,15 @@ jobs:
             git commit -m "data: weekly listings and week roll"
             git push
           fi
+      - name: Seed production Turso
+        env:
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          COUNT_SECRET: ${{ secrets.COUNT_SECRET }}
+          DATABASE_URL: file:./dev.db
+        run: |
+          if [ -z "$TURSO_DATABASE_URL" ] || [ -z "$TURSO_AUTH_TOKEN" ]; then
+            echo "skip Turso seed · set TURSO_DATABASE_URL and TURSO_AUTH_TOKEN"
+            exit 0
+          fi
+          npx tsx prisma/seed.ts
