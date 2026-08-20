@@ -17,7 +17,7 @@ ${SITE_NAME} is a weekly chart for vibe-coders deciding what to ship. Stampede i
 
 - List is this week. Bump is eight weeks of who rose and who fell.
 - Rank, cluster name, one-line why, builder count.
-- Empty rows may show a receipt (ESTIMATE) when someone in that hole already charges.
+- Empty rows may show a receipt (ESTIMATE) of how the industry already bills this way. Steal that pattern. Overlay Copy prompt pastes a research brief. Never invent verified MRR.
 
 ## Product rules
 

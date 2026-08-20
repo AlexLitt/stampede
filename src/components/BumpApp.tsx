@@ -5,7 +5,12 @@ import { useEffect, useMemo, useRef, useState, useTransition, type ReactNode } f
 import * as d3 from "d3";
 import { submitBuild } from "@/app/actions";
 import type { BumpSeries } from "@/lib/queries";
-import { copyLine } from "@/lib/copy-line";
+import {
+  copyLine,
+  emptyResearchPrompt,
+  receiptDek,
+  shownReceiptSource,
+} from "@/lib/copy-line";
 import { BRIEFS } from "@/lib/briefs";
 import {
   CATEGORIES,
@@ -77,21 +82,6 @@ function bindTabTrap(root: HTMLElement) {
   }
   root.addEventListener("keydown", onKey);
   return () => root.removeEventListener("keydown", onKey);
-}
-
-function receiptDek(s: BumpSeries, tip: string): string {
-  const leak = s.receiptLeak?.trim() ?? "";
-  const noisy =
-    !leak ||
-    leak === tip ||
-    /^https?:\/\//i.test(leak) ||
-    /lookup ·/i.test(leak) ||
-    /apps\.apple\.com/i.test(leak);
-  if (!noisy) return leak;
-  if (s.receiptSubs != null) {
-    return `About ${s.receiptSubs.toLocaleString("en-US")} already paying.`;
-  }
-  return "Someone in this hole already bills.";
 }
 
 function lerp(a: number, b: number, f: number) {
@@ -541,6 +531,9 @@ export function BumpApp({
   const selected = series.find((s) => s.slug === panelSlug) ?? null;
   const brief = selected ? overlayCopy(selected) : null;
   const evidence = selected ? evidenceChannels(selected.channels) : [];
+  const sourceLabel = selected
+    ? shownReceiptSource(selected.receiptSource)
+    : null;
   const tipSeries = series.find((s) => s.slug === tip?.slug);
   const weekId = weeks[weekIndex] ?? weeks[weeks.length - 1] ?? "";
 
@@ -569,6 +562,31 @@ export function BumpApp({
             : "Copied skip"
           : "Copy failed",
       ),
+    );
+  }
+
+  function copyEmptyPrompt(s: BumpSeries) {
+    const prompt = emptyResearchPrompt(
+      {
+        slug: s.slug,
+        name: s.name,
+        oneLine: s.oneLine,
+        because: s.because,
+        doNot: s.doNot,
+        tip: s.tip,
+        weekId,
+        receiptMrrUsd: s.receiptMrrUsd,
+        receiptSource: s.receiptSource,
+        receiptLeak: s.receiptLeak,
+        evidence: evidenceChannels(s.channels).map((ch) => ({
+          title: channelHeadline(ch),
+          url: ch.url,
+        })),
+      },
+      window.location.origin,
+    );
+    void writeClipboard(prompt).then((ok) =>
+      ping(ok ? "Copied prompt" : "Copy failed"),
     );
   }
 
@@ -1057,13 +1075,18 @@ export function BumpApp({
                         .join(" · ")}
                     </p>
                   ) : null}
-                  {selected.receiptSource ? (
+                  {sourceLabel ? (
                     <p className="mono mt-2 text-[13px] leading-5 text-pretty text-mute">
-                      {selected.receiptSource}
+                      {sourceLabel}
                     </p>
                   ) : null}
                   <p className="mono mt-2 text-[13px] leading-5 text-pretty">
-                    {receiptDek(selected, brief?.tip ?? "")}
+                    {receiptDek({
+                      name: selected.name,
+                      leak: selected.receiptLeak,
+                      tip: brief?.tip ?? "",
+                      subs: selected.receiptSubs,
+                    })}
                   </p>
                   {evidence.length > 0 ? (
                     <ul className="mt-4">
@@ -1089,6 +1112,13 @@ export function BumpApp({
                       })}
                     </ul>
                   ) : null}
+                  <button
+                    type="button"
+                    className="press mono mt-4 min-h-10 w-full border-[3px] border-ink py-3 text-[11px] uppercase tracking-[0.14em]"
+                    onClick={() => copyEmptyPrompt(selected)}
+                  >
+                    Copy prompt
+                  </button>
                 </div>
               ) : null}
             </div>

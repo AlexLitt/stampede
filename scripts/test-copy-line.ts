@@ -1,5 +1,12 @@
 import assert from "node:assert/strict";
-import { copyLine, pickLaneLead } from "../src/lib/copy-line";
+import {
+  billThisWay,
+  copyLine,
+  emptyResearchPrompt,
+  pickLaneLead,
+  receiptDek,
+  shownReceiptSource,
+} from "../src/lib/copy-line";
 
 const origin = "https://stampede.example";
 
@@ -91,6 +98,70 @@ const origin = "https://stampede.example";
   assert.equal(pickLaneLead(series, 0, "stampede")?.slug, "crowd");
   assert.equal(pickLaneLead(series, 1, "empty")?.slug, "hole");
   assert.equal(pickLaneLead([], 0, "stampede"), null);
+}
+
+{
+  assert.equal(
+    billThisWay("Farm / plant SOP wiki"),
+    "Bill this way on Farm / plant SOP wiki.",
+  );
+  assert.equal(shownReceiptSource("Industry vendor page"), null);
+  assert.equal(shownReceiptSource("Industry vendor rate card"), null);
+  assert.equal(shownReceiptSource("Vendor site"), null);
+  assert.equal(shownReceiptSource("App Store listing"), "App Store listing");
+  assert.equal(
+    receiptDek({
+      name: "Farm / plant SOP wiki",
+      leak: "Sold at Ag trade shows.",
+      tip: "Farmers do not want a chat box.",
+      subs: null,
+    }),
+    "Sold at Ag trade shows.",
+  );
+  assert.equal(
+    receiptDek({
+      name: "Farm / plant SOP wiki",
+      leak: "https://apps.apple.com/x",
+      tip: "x",
+      subs: null,
+    }),
+    "Bill this way on Farm / plant SOP wiki.",
+  );
+  assert.equal(
+    receiptDek({
+      name: "Room / curtain visualizer",
+      leak: "",
+      tip: "",
+      subs: 1200,
+    }),
+    "About 1,200 pay this way.",
+  );
+}
+
+{
+  const prompt = emptyResearchPrompt(
+    {
+      slug: "farm-sop-wiki",
+      name: "Farm / plant SOP wiki",
+      oneLine: "Spray charts and harvest notes. Not a chat box.",
+      because: "Plants do not want a chat box.",
+      doNot: "This is not chat-with-PDF.",
+      tip: "Sold at Ag trade shows.",
+      weekId: "2026-W34",
+      receiptMrrUsd: null,
+      receiptSource: "Industry vendor page",
+      receiptLeak: "Sold at Ag trade shows.",
+      evidence: [{ title: "Vendor", url: "https://example.com/farm" }],
+    },
+    origin,
+  );
+  assert.match(prompt, /Empty = steal/);
+  assert.match(prompt, /ESTIMATE/);
+  assert.equal(prompt.includes("verified MRR"), true);
+  assert.match(prompt, /bills this way on Farm \/ plant SOP wiki/);
+  assert.match(prompt, /Permalink: https:\/\/stampede\.example\/\?w=2026-W34&c=farm-sop-wiki/);
+  assert.match(prompt, /Vendor: https:\/\/example.com\/farm/);
+  assert.equal(prompt.includes("Industry vendor page"), false);
 }
 
 console.log("ok copy-line");
