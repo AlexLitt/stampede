@@ -500,6 +500,29 @@ select.hdr-ctrl,
   color: var(--color-ink);
 }
 
+.prompt-slab {
+  margin: 0;
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper-2);
+  padding: 16px 18px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.prompt-comment {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-mute);
+}
+
+.prompt-comment .prompt-dollar {
+  color: var(--color-ink);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .press,
   .press:active:not(:disabled),

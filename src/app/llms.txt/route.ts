@@ -11,13 +11,14 @@ ${SITE_NAME} is a weekly chart for vibe-coders deciding what to ship. Stampede i
 ## Site
 
 - Home: ${home}
+- Info: ${absoluteUrl("/info")}
 - Sitemap: ${absoluteUrl("/sitemap.xml")}
 
 ## How to read it
 
 - List is this week. Bump is eight weeks of who rose and who fell.
 - Rank, cluster name, one-line why, builder count.
-- Empty rows may show a receipt (ESTIMATE) of how the industry already bills this way. Steal that pattern. Overlay Copy prompt pastes a research brief. Never invent verified MRR.
+- Empty rows may show a receipt (ESTIMATE) of how the industry already bills this way. Steal that pattern. Overlay Copy prompt is for the visitor: paste it into an agent to research what's working and what business they can ship. Never invent verified MRR.
 
 ## Product rules
 

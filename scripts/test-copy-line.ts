@@ -155,13 +155,16 @@ const origin = "https://stampede.example";
     },
     origin,
   );
-  assert.match(prompt, /Empty = steal/);
+  assert.match(prompt, /business I could ship/);
+  assert.match(prompt, /^# Research this hole/m);
   assert.match(prompt, /ESTIMATE/);
   assert.equal(prompt.includes("verified MRR"), true);
-  assert.match(prompt, /bills this way on Farm \/ plant SOP wiki/);
+  assert.match(prompt, /What's working now/);
+  assert.match(prompt, /What kind of business I can do/);
   assert.match(prompt, /Permalink: https:\/\/stampede\.example\/\?w=2026-W34&c=farm-sop-wiki/);
   assert.match(prompt, /Vendor: https:\/\/example.com\/farm/);
   assert.equal(prompt.includes("Industry vendor page"), false);
+  assert.equal(prompt.includes("Stampede voice"), false);
 }
 
 console.log("ok copy-line");

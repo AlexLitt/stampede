@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { IBM_Plex_Mono, Oswald } from "next/font/google";
+import { StripExtensionAttrs } from "@/components/StripExtensionAttrs";
 import {
   SITE_DESCRIPTION,
   SITE_NAME,
@@ -97,6 +98,7 @@ export default function RootLayout({
         className={`${display.variable} ${mono.variable} antialiased`}
         suppressHydrationWarning
       >
+        <StripExtensionAttrs />
         {children}
         <Analytics />
       </body>

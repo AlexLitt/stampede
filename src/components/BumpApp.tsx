@@ -11,6 +11,7 @@ import {
   receiptDek,
   shownReceiptSource,
 } from "@/lib/copy-line";
+import { siteOrigin } from "@/lib/site";
 import { BRIEFS } from "@/lib/briefs";
 import {
   CATEGORIES,
@@ -20,6 +21,7 @@ import {
   weekTick,
 } from "@/lib/week";
 import { CategoryIcon, categoryColor, categoryLabelColor } from "@/components/CategoryIcon";
+import { StampedeMark } from "@/components/StampedeMark";
 import {
   channelHeadline,
   channelMeta,
@@ -58,6 +60,28 @@ function overlayCopy(s: BumpSeries) {
     doNot: s.doNot.trim() || b?.doNot || "",
     tip: s.tip.trim() || b?.tip || "",
   };
+}
+
+function emptyPromptText(s: BumpSeries, weekId: string) {
+  return emptyResearchPrompt(
+    {
+      slug: s.slug,
+      name: s.name,
+      oneLine: s.oneLine,
+      because: s.because,
+      doNot: s.doNot,
+      tip: s.tip,
+      weekId,
+      receiptMrrUsd: s.receiptMrrUsd,
+      receiptSource: s.receiptSource,
+      receiptLeak: s.receiptLeak,
+      evidence: evidenceChannels(s.channels).map((ch) => ({
+        title: channelHeadline(ch),
+        url: ch.url,
+      })),
+    },
+    siteOrigin(),
+  );
 }
 
 function bindTabTrap(root: HTMLElement) {
@@ -566,26 +590,7 @@ export function BumpApp({
   }
 
   function copyEmptyPrompt(s: BumpSeries) {
-    const prompt = emptyResearchPrompt(
-      {
-        slug: s.slug,
-        name: s.name,
-        oneLine: s.oneLine,
-        because: s.because,
-        doNot: s.doNot,
-        tip: s.tip,
-        weekId,
-        receiptMrrUsd: s.receiptMrrUsd,
-        receiptSource: s.receiptSource,
-        receiptLeak: s.receiptLeak,
-        evidence: evidenceChannels(s.channels).map((ch) => ({
-          title: channelHeadline(ch),
-          url: ch.url,
-        })),
-      },
-      window.location.origin,
-    );
-    void writeClipboard(prompt).then((ok) =>
+    void writeClipboard(emptyPromptText(s, weekId)).then((ok) =>
       ping(ok ? "Copied prompt" : "Copy failed"),
     );
   }
@@ -617,36 +622,44 @@ export function BumpApp({
       <header className="border-b border-ink/25">
         <div className="mx-auto w-full max-w-[80rem] px-4 py-5 sm:px-6 sm:py-6 lg:px-10">
           <div className="mx-auto flex max-w-[46rem] flex-col items-center text-center">
-            <Link
-              href="/"
-              className="press inline-flex min-h-10 items-center gap-2 text-ink no-underline"
-              aria-label="Stampede home"
-              onClick={(e) => {
-                if (
-                  e.metaKey ||
-                  e.ctrlKey ||
-                  e.shiftKey ||
-                  e.altKey ||
-                  e.button !== 0
-                ) {
-                  return;
-                }
-                e.preventDefault();
-                setOpen(null);
-                setBuildOpen(false);
-                setLane("stampede");
-                setCategory("all");
-                setView("list");
-                setHover(null);
-                setTip(null);
-                setT(Math.max(0, weeks.length - 1));
-              }}
-            >
-              <StampedeMark />
-              <h1 className="rank text-[1.5rem] leading-none tracking-tight">
-                Stampede
-              </h1>
-            </Link>
+            <div className="inline-flex items-center gap-3">
+              <Link
+                href="/"
+                className="press inline-flex min-h-10 items-center gap-2 text-ink no-underline"
+                aria-label="Stampede home"
+                onClick={(e) => {
+                  if (
+                    e.metaKey ||
+                    e.ctrlKey ||
+                    e.shiftKey ||
+                    e.altKey ||
+                    e.button !== 0
+                  ) {
+                    return;
+                  }
+                  e.preventDefault();
+                  setOpen(null);
+                  setBuildOpen(false);
+                  setLane("stampede");
+                  setCategory("all");
+                  setView("list");
+                  setHover(null);
+                  setTip(null);
+                  setT(Math.max(0, weeks.length - 1));
+                }}
+              >
+                <StampedeMark />
+                <h1 className="rank text-[1.5rem] leading-none tracking-tight">
+                  Stampede
+                </h1>
+              </Link>
+              <Link
+                href="/info"
+                className="press mono inline-flex min-h-10 items-center text-[11px] uppercase tracking-[0.14em] text-mute underline decoration-1 underline-offset-4"
+              >
+                Info
+              </Link>
+            </div>
             <p className="masthead-dek mono mt-3.5 max-w-[42rem] text-pretty text-mute">
               Weekly rank of what vibe-coders are shipping versus empty holes
               that already bill. Stampede — skip. Empty — steal. Counts and
@@ -960,7 +973,11 @@ export function BumpApp({
             role="dialog"
             aria-modal="true"
             aria-labelledby="brief-title"
-            className={`brief-card ink-scroll max-h-[min(42rem,90dvh)] w-full max-w-[32rem] overflow-auto border-[3px] border-ink bg-paper ${allowStagger && panelIn ? "is-stagger" : ""}`}
+            className={`brief-card ink-scroll max-h-[min(56rem,92dvh)] w-full overflow-auto border-[3px] border-ink bg-paper ${
+              selected.lane === "empty"
+                ? "max-w-[min(52rem,calc(100vw-2rem))]"
+                : "max-w-[32rem]"
+            } ${allowStagger && panelIn ? "is-stagger" : ""}`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4 border-b border-ink px-5 py-3">
@@ -1112,13 +1129,27 @@ export function BumpApp({
                       })}
                     </ul>
                   ) : null}
-                  <button
-                    type="button"
-                    className="press mono mt-4 min-h-10 w-full border-[3px] border-ink py-3 text-[11px] uppercase tracking-[0.14em]"
-                    onClick={() => copyEmptyPrompt(selected)}
-                  >
-                    Copy prompt
-                  </button>
+                </div>
+              ) : null}
+              {selected.lane === "empty" ? (
+                <div className="ds ds-6 mt-6">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="mono text-[10px] uppercase tracking-[0.14em] text-mute">
+                      The prompt
+                    </p>
+                    <button
+                      type="button"
+                      className="press mono flex h-10 min-w-10 items-center px-3 text-[11px] uppercase"
+                      onClick={() => copyEmptyPrompt(selected)}
+                    >
+                      Copy prompt
+                    </button>
+                  </div>
+                  <pre className="prompt-slab mt-3">{emptyPromptText(selected, weekId)}</pre>
+                  <p className="prompt-comment mt-3">
+                    <span className="prompt-dollar">$</span> paste in your
+                    agent. Research this hole. You press enter.
+                  </p>
                 </div>
               ) : null}
             </div>
@@ -1570,27 +1601,6 @@ function IconBump() {
         d="M1 12 L4 4 L8 9 L12 3 L15 11"
         stroke="currentColor"
         strokeWidth="1.6"
-        strokeLinejoin="round"
-        strokeLinecap="square"
-      />
-    </svg>
-  );
-}
-
-function StampedeMark({ className }: { className?: string }) {
-  return (
-    <svg
-      width="36"
-      height="28"
-      viewBox="0 0 36 28"
-      fill="none"
-      aria-hidden
-      className={`block ${className ?? ""}`}
-    >
-      <path
-        d="M2 22 L9 6 L16 16 L24 4 L34 20"
-        stroke={INK}
-        strokeWidth="2.2"
         strokeLinejoin="round"
         strokeLinecap="square"
       />

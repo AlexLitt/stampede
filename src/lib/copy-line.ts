@@ -99,11 +99,11 @@ export function emptyResearchPrompt(
   origin: string,
 ): string {
   const permalink = clusterPermalink(origin, c.weekId, c.slug);
+  const topic = c.name.replace(/\.$/, "");
   const lines = [
-    "Research this Stampede empty hole. Empty = steal, not skip.",
-    "Receipts and counts are ESTIMATE. Do not invent verified MRR.",
+    `# Research this hole as a business I could ship. Source: Stampede (empty = few vibe-coders, industry already bills this way). Counts and dollars are ESTIMATE. Do not invent verified MRR.`,
     "",
-    `Cluster: ${c.name}`,
+    `Topic: ${topic}`,
     `Permalink: ${permalink}`,
     `One line: ${c.oneLine}`,
   ];
@@ -114,18 +114,19 @@ export function emptyResearchPrompt(
   const source = shownReceiptSource(c.receiptSource);
   if (source) lines.push(`Source: ${source}`);
   const leak = c.receiptLeak?.trim();
-  if (leak) lines.push(`Leak: ${leak}`);
+  if (leak) lines.push(`Where they sell: ${leak}`);
   if (c.evidence?.length) {
-    lines.push("Evidence:");
+    lines.push("Starting links:");
     for (const e of c.evidence) lines.push(`- ${e.title}: ${e.url}`);
   }
   lines.push(
     "",
-    "Add, in Stampede voice (dry, short, specific, no SaaS warmth):",
-    `1. Who already bills this way on ${c.name.replace(/\.$/, "")} — named vendor, channel, public price if it exists.`,
-    "2. Who the buyer is and where they hang out (not Twitter/PH unless that's actually true).",
-    "3. What a vibe-coder should ship first: one ugly job.",
-    "4. The herd version of this hole — what not to build.",
+    "Tell me, concrete and short:",
+    "1. What's working now — named vendors, how they bill, who pays, public price if it exists.",
+    "2. The job to be done in one sentence. Who has the budget. Where they hang out (not Twitter/PH unless that's actually true).",
+    "3. What kind of business I can do as a solo founder: one ugly first product, how it charges, first customers.",
+    "4. What not to build — the herd/wrapper version of this topic.",
+    "5. Why this hole stays empty, or why the receipt might be a mirage.",
   );
   return lines.join("\n");
 }
